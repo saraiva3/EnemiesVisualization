@@ -1,0 +1,147 @@
+ID, Enemies, Tag
+Kingdom of the Netherlands,1,FRA
+Belarus,1,RUS
+Moldova,1,TUR
+Bhutan,1,CHN
+Burkina Faso,1,IRQ
+East Timor,1,BGR
+Cyprus,1,GBR
+Sierra Leone,1,ITA
+Bangladesh,1,USA
+Senegal,1,ROU
+Cameroon,2,ESP
+Slovenia,2,HUN
+Fiji,2,JPN
+Benin,2,IRN
+Mauritania,2,PAK
+Antigua and Barbuda,2,FIN
+Barbados,2,THA
+Saint Lucia,2,DEU
+Saint Vincent and the Grenadines,2,IND
+Kuwait,2,HRV
+Czech Republic,2,DNK
+Bahrain,2,SWE
+Iceland,2,POL
+Switzerland,2,SVK
+Tonga,2,YEM
+United Arab Emirates,2,AUS
+Seychelles,2,BEL
+Kazakhstan,2,SOM
+Kyrgyzstan,2,CUB
+Turkmenistan,2,ETH
+Tanzania,2,CAN
+Jamaica,3,LTU
+Niger,3,GRC
+Djibouti,3,EGY
+Mozambique,3,ARM
+Malta,4,AUT
+Cambodia,4,PRT
+Bosnia and Herzegovina,4,PRK
+Kenya,4,VNM
+Chad,4,SYR
+Tajikistan,4,ALB
+Singapore,4,ISR
+Ghana,5,NZL
+Republic of Ireland,5,SRB
+Guinea,5,PHL
+Burundi,5,NOR
+Qatar,5,LBY
+Macedonia,6,IDN
+Republic of the Congo,6,LVA
+Democratic Republic of the Congo,6,COL
+Uzbekistan,6,DOM
+Angola,6,EST
+Tunisia,7,PER
+Mali,7,BRA
+Grenada,7,LBR
+Algeria,8,SAU
+Eritrea,8,LUX
+Rwanda,8,BOL
+Nepal,9,NIC
+Laos,9,AFG
+Jordan,9,MNG
+Montenegro,12,CHL
+Uganda,12,MEX
+Ukraine,13,ARG
+Malaysia,13,ECU
+Azerbaijan,13,PRY
+Panama,14,SDN
+San Marino,15,GEO
+Costa Rica,15,HTI
+Guatemala,15,SLV
+Uruguay,15,MAR
+Venezuela,16,HND
+Lebanon,16,VEN
+South Korea,16,LBN
+Morocco,17,KOR
+Honduras,17,211
+Georgia,18,CRI
+Haiti,18,GTM
+El Salvador,18,URY
+Mexico,19,PAN
+Argentina,19,UKR
+Ecuador,19,MYS
+Paraguay,19,AZE
+Sudan,19,MNE
+Mongolia,20,UGA
+Chile,20,NPL
+Bolivia,21,LAO
+Nicaragua,21,JOR
+Afghanistan,21,DZA
+Luxembourg,22,ERI
+Brazil,23,RWA
+Liberia,23,TUN
+Saudi Arabia,23,MLI
+Estonia,24,190
+Peru,24,MKD
+Libya,25,COG
+Indonesia,25,COD
+Latvia,25,UZB
+Colombia,25,AGO
+Dominica,25,GHA
+Norway,28,IRL
+Serbia,29,GIN
+Philippines,29,BDI
+New Zealand,30,QAT
+Albania,31,173
+Israel,31,KHM
+Syria,32,BIH
+North Korea,33,KEN
+Vietnam,33,TCD
+Portugal,34,TJK
+Austria,41,SGP
+Armenia,42,JAM
+Greece,43,NER
+Egypt,43,DJI
+Lithuania,44,MOZ
+Canada,45,CMR
+Ethiopia,46,SVN
+Somalia,47,FJI
+Cuba,47,BEN
+Australia,48,MRT
+Belgium,48,197
+Yemen,50,180
+Slovakia,52,187
+Poland,53,193
+Sweden,55,KWT
+Denmark,57,CZE
+Croatia,60,163
+India,61,ISL
+Germany,65,CHE
+Thailand,68,188
+Pakistan,72,ARE
+Finland,72,196
+Iran,79,KAZ
+Japan,80,KGZ
+Hungary,84,TKM
+Spain,91,TZA
+Romania,93,NLD
+United States,112,BLR
+Italy,114,MDA
+United Kingdom,117,BTN
+Bulgaria,120,BFA
+Iraq,121,TLS
+China,159,CYP
+Turkey,178,SLE
+Russia,201,BGD
+France,212,SEN

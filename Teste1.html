@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Example</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <style>
+    
+      .axis text {        
+        font-size: 15pt;
+      }
+      .axis .label {
+        font-size: 20pt;
+      }
+  .axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: #fa3838;
+}
+      .y.axis path, .y.axis line {
+        stroke: none;
+      }
+
+      .toolTip {
+        position: absolute;
+        display: none;
+        min-width: 80px;
+        height: auto;
+        background: none repeat scroll 0 0 #ffffff;
+        border: 1px solid #000;
+        padding: 14px;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <script>
+
+      var outerWidth = 960;
+      var outerHeight = 500;
+      var margin = { left: 400, top: 40, right: 130, bottom: 90 };
+
+      var barPadding = 0.2;
+      var barPaddingOuter = 0.1;
+
+      var xColumn = "population";
+      var yColumn = "city";
+
+      var xAxisLabelText = "Inimigos";
+      var xAxisLabelOffset = 75;
+
+      var innerWidth  = outerWidth  - margin.left - margin.right;
+      var innerHeight = outerHeight - margin.top  - margin.bottom;
+
+      var svg = d3.select("body").append("svg")
+        .attr("width",  outerWidth)
+        .attr("height", outerHeight);
+
+      var tooltip = d3.select("body").append("div").attr("class", "toolTip");
+
+
+      var g = svg.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+      var xAxisG = g.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + innerHeight + ")")
+
+      var xAxisLabel = xAxisG.append("text")
+        .style("text-anchor", "middle")
+        .attr("x", innerWidth / 2)
+        .attr("y", xAxisLabelOffset)
+        .attr("class", "label")
+        .text(xAxisLabelText);
+
+      var yAxisG = g.append("g")
+        .attr("class", "y axis");
+      var xScale = d3.scale.linear().range([0, innerWidth]);
+      var yScale = d3.scale.ordinal().rangeRoundBands([0, innerHeight], barPadding, barPaddingOuter);
+      var xAxis = d3.svg.axis().scale(xScale).orient("bottom")
+        .ticks(5)
+        .tickFormat(d3.format("s"))
+        .outerTickSize(0);
+      var yAxis = d3.svg.axis().scale(yScale).orient("left")
+        .outerTickSize(0);
+
+
+        
+      function render(data){
+        xScale.domain([0, d3.max(data, function (d){ return d[xColumn]; })]);
+        yScale.domain(       data.map( function (d){ return d[yColumn]; }));
+        xAxisG.call(xAxis);
+        yAxisG.call(yAxis);
+console.log(data)
+   var legendHolder = svg.append('g')
+        .attr('transform', "translate(" + (-outerWidth+100) + "," + (40) + ")")
+        .attr('class','legendHolder')
+
+             var legend = legendHolder.selectAll(".legend")
+        .data(data)
+        .enter().append("g")
+        .attr("class", "legend")
+        .attr('transform', function(d, i) { return "translate(0," + i * 25 + ")"; })
+        .attr("width", 36)
+
+        legend.append("rect")
+        .attr("x", function(d,i){return (outerWidth+650)})
+        .attr("y", 240)
+        .attr("width", 18)
+        .attr("height", 18)
+        .style("fill", "#000");
+
+        legend.append("text")
+        .attr("x", function(d,i){return (outerWidth +650+20)})
+        .attr("y", 250)
+        .attr("dy", ".35em")
+        .attr("font-weight","bold")
+        .text(function(d) { return d.continent; });
+ legend
+      .on("click",function(d){
+          //filter data   
+          //filterData[d.name]=!filterData[d.name];
+          reDraw(d.name);
+    });
+        var bars = g.selectAll("rect").data(data);
+        bars.enter().append("rect")
+          .attr("height", yScale.rangeBand()).attr("class", "bar");
+
+        bars.attr("x", 0)
+          .attr("y",     function (d){ return yScale(d[yColumn]); })
+          .attr("width", function (d){ return xScale(d[xColumn]); })
+          .on("mousemove", function(d){
+            tooltip
+              .style("left", d3.event.pageX - 50 + "px")
+              .style("top", d3.event.pageY - 70 + "px")
+              .style("display", "inline-block")
+              .html((d.city) + "<br>" + "Total:" + (d.population) + "<br>" );
+        })
+        .on("mouseout", function(d){ tooltip.style("display", "none");})
+        .enter()
+              .append('text')
+              .attr({'x':function(d) {return xScale(d[xColumn])+15; },'y':function(d,i){ return yScale(d[yColumn])+17; }})
+              .text(function(d){ return d.population; }).style({'fill':'#000','font-size':'15px'});
+
+
+
+
+
+
+        bars.exit().remove();
+      }
+      function type(d){
+        d.population = +d.population;
+
+        return d;
+      }
+      d3.csv("cit.csv", type, render);
+    </script>
+
+  </body>
+</html>
