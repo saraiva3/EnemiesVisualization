@@ -1,14 +1,16 @@
-city,population,continent
-França,185,Europa
-China,155,Asia
-Turquia,140,Europa
-Russia,125,Europa
-Iraque,121,Asia
-Bulgaria,120,Europa
-Italia,114,Europa
-Estados Unidos,113,America
-Romenia,93,Europa
-Espanha,91,Europa
-Hungria,84,Europa
-Japão,80,Asia
-Irã,79,Asia
+country,enemies,continent,
+France,212,Europe,
+Russia,201,Europe,
+Turkey,178,Asia,
+China,159,Asia,
+Iraq,121,Asia,
+Bulgaria,120,Europe,
+United Kingdom,117,Europe,
+Italy,114,Europe,
+United States,112,America,
+Romania,93,Europe,
+Spain,91,Europe,
+Hungary,84,Europe,
+Japan,80,Asia,
+Iran,79,Asia,
+Finland,72,Europe,

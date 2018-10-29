@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<title>Unique Enemies</title>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+.axis text {
+  font-size: 15pt;
+}
+.axis .label {
+  font-size: 20pt;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+.bar {
+  fill: #fa3838;
+}
+.y.axis path, .y.axis line {
+  stroke: none;
+}
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 1px solid #000;
+  padding: 14px;
+  text-align: center;
+}
+#div_graph, #checkbox{
+  text-align: left;
+}
+#title{
+  text-align: center;
+}
+label{
+  cursor:pointer;
+}
+</style>
+<body>
+  <div class="row">
+    <div id= "div_graph" class="col-sm-12">
+      <div id= "div_graph" class="col-sm-6">
+        <h2 id= "title">Top 15 countries with unique enemies</h2>
+        <svg id = "Graph_1" width="960" height="500"></svg>
+      </div>
+      <div id="checkbox" class="col-sm-1">
+        <h3> Sort Data: </h3>
+        <div class="form-check">
+          <label><input type="radio" name="group1" id="checkAs">Sort ascending</label>
+          <label><input type="radio" name="group1" id="checkDe">Sort descending</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type='text/javascript' src='js/uniquechart.js'></script>
