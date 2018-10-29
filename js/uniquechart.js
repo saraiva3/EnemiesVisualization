@@ -10,7 +10,7 @@ var barPaddingOuter = 0.1;
 var xColumn = "enemies";
 var yColumn = "country";
 
-var xAxisLabelText = "Number of unique enemies";
+var xAxisLabelText = "Unique enemies";
 var xAxisLabelOffset = 75;
 
 var innerWidth  = outerWidth  - margin.left - margin.right;
